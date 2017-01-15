@@ -3,7 +3,9 @@
 # comes with Ruby!
 
 def reverse_a_string(string)
-
+  @string = string.chars
+  x = @string.sort {|first, last| last <=> first}
+  x.join
 end
 
 # Driver code - don't touch anything below this line.
@@ -19,5 +21,6 @@ puts
 if result == "edcba"
   puts "PASS!"
 else
+  p
   puts "F"
 end
